@@ -1,0 +1,5 @@
+git clone https://github.com/linas-p/finite-difference-biosensor-library
+cd finite-difference-biosensor-library
+make
+cd ..
+make
