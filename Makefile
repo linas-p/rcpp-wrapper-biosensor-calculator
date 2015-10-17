@@ -17,8 +17,8 @@ cpp_sharedlibs := $(patsubst %.cpp,%.o,$(cpp_sources))
 
 
 
-main: shared_libs
-	g++ -shared -o testing.so $(wildcard $(FB_BIO_LIB)/*.o) $(wildcard ./*.o) -L/usr/lib/R/lib -lR -L/usr/lib/R/lib -lR
+main.o: shared_libs
+	g++ -shared -o testing.so -pedantic -Wall $(wildcard $(FB_BIO_LIB)/*.o) $(wildcard ./*.o) -L/usr/lib/R/lib -lR -L/usr/lib/R/lib -lR
 
 shared_libs: $(cpp_sharedlibs)
 
